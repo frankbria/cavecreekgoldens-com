@@ -1,13 +1,11 @@
 'use client';
 
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
+
 import Image from 'next/image';
 
 export default function MeetTheStudsPage() {
   return (
     <main className="bg-[#f8efef] text-black">
-      <Navbar />
 
       <section className="bg-gradient-to-b from-[#ff8e00] to-white py-16 text-center">
         <h1 className="text-5xl font-bold text-black tracking-wide">Meet The Studs</h1>
@@ -44,7 +42,6 @@ export default function MeetTheStudsPage() {
         </a>
       </section>
 
-      <Footer />
     </main>
   );
 }

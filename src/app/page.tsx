@@ -1,19 +1,14 @@
+// src/app/page.tsx
+
 import React from "react";
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import ServicesGrid from "@/components/ServicesGrid";
-import Footer from "@/components/Footer";
-
-
-
 
 const Home = () => {
   return (
-    <div>
-      <Navbar />
+    <div className="mt-16"> {/* Added margin-top to ensure content appears below the navbar */}
       <Hero />
       <ServicesGrid />
-      <Footer />
     </div>
   );
 };

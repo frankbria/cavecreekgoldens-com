@@ -1,13 +1,11 @@
 'use client'
 
 import Image from 'next/image'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
+
 
 export default function ServicesPage() {
   return (
     <div className="flex flex-col min-h-screen">
-      <Navbar />
 
       <div className="bg-orange-500 text-center py-12 text-white">
         <h1 className="text-5xl font-bold tracking-widest">SERVICES</h1>
@@ -50,7 +48,6 @@ export default function ServicesPage() {
         </a>
       </div>
 
-      <Footer />
     </div>
   )
 }

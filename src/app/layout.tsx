@@ -1,33 +1,32 @@
-import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+// src/app/layout.tsx
+
+import Navbar from "@/components/Navbar";
 import "./globals.css";
+import { Inter } from "next/font/google";
+import Footer from "@/components/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-export const metadata: Metadata = {
+export const metadata = {
   title: "Cave Creek Goldens",
-  description: "Your trusted source for quality golden retrievers stud service.",
+  description: "Red Golden Retriever Stud Services in Arizona",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+      <body className={`${inter?.className || ''} bg-gray-50 text-gray-800 antialiased flex flex-col min-h-screen`}>
+        <header className="sticky top-0 z-50">
+          <Navbar />
+        </header>
+
+        <main className="flex-grow max-w-5xl mx-auto w-full px-4 sm:px-6 py-10">
+          {children}
+        </main>
+
+        <footer className="mt-auto">
+          <Footer />
+        </footer>
       </body>
     </html>
   );
