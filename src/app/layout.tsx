@@ -2,10 +2,11 @@
 
 import Navbar from "@/components/Navbar";
 import "./globals.css";
-import { Inter } from "next/font/google";
+import "@fontsource/inter/400.css";
+import "@fontsource/inter/500.css";
+import "@fontsource/inter/600.css";
+import "@fontsource/inter/700.css";
 import Footer from "@/components/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Cave Creek Goldens",
@@ -25,7 +26,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="keywords" content="Cave Creek Goldens, Red Golden Retrievers, Stud Services, Arizona, Golden Retriever" />
         <meta name="author" content="Noatak Enterprises, LLC, dba Cave Creek Goldens" />
       </head>
-      <body className={`${inter?.className || ''} bg-gray-50 text-gray-800 antialiased flex flex-col min-h-screen`}>
+      <body className="font-['Inter',sans-serif] bg-gray-50 text-gray-800 antialiased flex flex-col min-h-screen">
         <header className="sticky top-0 z-50">
           <Navbar />
         </header>
